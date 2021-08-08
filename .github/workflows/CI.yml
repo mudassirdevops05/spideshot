@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  testSuite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Runs a Fake Test Script
+        run: test -f index.html
