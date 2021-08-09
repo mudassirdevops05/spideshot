@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Runs a Fake Test Script
-        run: test -f index.html
+        run: test -f index.html && fail || fail
